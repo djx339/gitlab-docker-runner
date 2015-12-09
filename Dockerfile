@@ -1,7 +1,7 @@
 FROM gitlab/gitlab-runner
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        curl
+        curl \
     && rm -rf /var/lib/apt/lists/*
 
 ENV DOCKER_BUCKET get.docker.com
