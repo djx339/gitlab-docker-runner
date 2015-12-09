@@ -1,8 +1,8 @@
-FROM gitlab/gitlab-runner:alpine
+FROM gitlab/gitlab-runner
 
-RUN apk add --update \
-        curl \
-    && rm -rf /var/cache/apk/*
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        curl
+    && rm -rf /var/lib/apt/lists/*
 
 ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.9.1
