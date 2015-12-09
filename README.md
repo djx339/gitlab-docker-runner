@@ -20,3 +20,6 @@ docker exec -it gitlab-runner gitlab-runner register
 ```
 
 executor choice **shell**
+
+
+### [Installing Trusted SSL Server Certificates](https://github.com/ayufan/gitlab-ci-multi-runner/blob/master/docs/install/docker.md#installing-trusted-ssl-server-certificates)
