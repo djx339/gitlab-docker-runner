@@ -19,4 +19,7 @@ RUN curl -fsSL "$GOLANG_DOWNLOAD_URL" -o golang.tar.gz \
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
+RUN echo "export PATH=$PATH" >> /etc/profile \
+    && echo "export GOPATH=$GOPATH" >> /etc/profile
+
 RUN go get github.com/tools/godep
