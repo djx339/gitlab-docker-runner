@@ -4,6 +4,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
     && rm -rf /var/lib/apt/lists/*
 
+RUN groupadd -g 999 docker \
+    && usermod -aG docker gitlab-runner
+
 ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.9.1
 ENV DOCKER_SHA256 52286a92999f003e1129422e78be3e1049f963be1888afc3c9a99d5a9af04666
